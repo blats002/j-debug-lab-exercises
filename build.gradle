@@ -1,0 +1,14 @@
+allprojects {
+    apply plugin: 'java'
+
+    group = 'com.debug.exercises'
+    version = '1.0'
+
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+
+    }
+}
