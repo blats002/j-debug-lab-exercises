@@ -1,4 +1,4 @@
-rootProject.name = 'debugging-excercices'
+rootProject.name = 'j-debug-lab-exercises'
 
 include 'common'
 include 'exercise01-nullpointer'
