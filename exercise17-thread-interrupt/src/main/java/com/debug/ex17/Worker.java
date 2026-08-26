@@ -6,7 +6,8 @@ public class Worker implements Runnable {
         try {
             Thread.sleep(5000);
         } catch (InterruptedException e) {
-            throw new RuntimeException("Interrupted!", e); // to debug
+            Thread.currentThread().interrupt(); // Restore interrupted status
+            System.out.println("Worker received interruption and terminated gracefully.");
         }
     }
 }

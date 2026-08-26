@@ -10,10 +10,12 @@ public class App {
         items.add("B");
         items.add("C");
 
+        List<String> toAdd = new ArrayList<>();
         for (String item : items) {
             if ("B".equals(item)) {
-                items.add("D");
+                toAdd.add("D");
             }
         }
+        items.addAll(toAdd);
     }
 }

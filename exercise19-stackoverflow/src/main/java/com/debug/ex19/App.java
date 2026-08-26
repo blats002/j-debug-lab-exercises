@@ -5,7 +5,10 @@ public class App {
         System.out.println(factorial(5));
     }
 
-    static long factorial(long n) {
+    public static long factorial(long n) {
+        if (n <= 1) {
+            return 1;
+        }
         return n * factorial(n - 1);
     }
 }

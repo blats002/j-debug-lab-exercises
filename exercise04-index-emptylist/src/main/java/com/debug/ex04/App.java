@@ -6,6 +6,10 @@ public class App {
     public static void main(String[] args) {
         ReconciliationService reconciliationService = new ReconciliationService();
         List<String> items = reconciliationService.getIncomingProducts();
-        System.out.println(items.get(0));
+        if (!items.isEmpty()) {
+            System.out.println(items.get(0));
+        } else {
+            System.out.println("No incoming products found.");
+        }
     }
 }
