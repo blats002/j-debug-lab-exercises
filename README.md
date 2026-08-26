@@ -75,30 +75,52 @@ Run all lab tests across all 20 modules:
 
 ---
 
-## 📋 Exercise Curriculum (20 Modules)
+## 🌿 Official Git Solution Branches
 
-| # | Module Directory | Exception / Failure Mode | Target Debugging Pattern |
-|:---:|:---|:---|:---|
-| **01** | `exercise01-nullpointer` | `NullPointerException` | Uninitialized Field & Reference Guard |
-| **02** | `exercise02-nullpointer-di` | `NullPointerException` | Missing Dependency Injection / Wiring |
-| **03** | `exercise03-index-loop` | `ArrayIndexOutOfBoundsException` | Off-by-One Loop Boundary |
-| **04** | `exercise04-index-emptylist` | `IndexOutOfBoundsException` | Positional Access on Empty List |
-| **05** | `exercise05-divide-zero` | `ArithmeticException` | Division Guard & Defensive Validation |
-| **06** | `exercise06-number-format` | `NumberFormatException` | String Number Parsing & Sanitization |
-| **07** | `exercise07-classpath` | `ClassNotFoundException` | Classpath Resolution & FQCN Verification |
-| **08** | `exercise08-illegal-argument` | `IllegalArgumentException` | Domain Boundary & Input Validation |
-| **09** | `exercise09-file-path` | `FileNotFoundException` | Working Directory (CWD) Resolution |
-| **10** | `exercise10-io-permission` | `IOException` | Directory Creation & Write Permissions |
-| **11** | `exercise11-concurrent-mod` | `ConcurrentModificationException` | Mutation During Active Iteration |
-| **12** | `exercise12-illegal-state` | `IllegalStateException` | Object Lifecycle Invariant Enforcement |
-| **13** | `exercise13-sql-syntax` | `SQLException` | SQL Grammar, Keywords & Escaping |
-| **14** | `exercise14-sql-connection` | `SQLException` (Connection Refused) | JDBC URL Protocol & Port Reachability |
-| **15** | `exercise15-json-parse` | `JsonProcessingException` | JSON Schema & DTO Deserialization |
-| **16** | `exercise16-http-unknown-host` | `UnknownHostException` | DNS Resolution & URI Hostname Formatting |
-| **17** | `exercise17-thread-interrupt` | `InterruptedException` | Java Thread Interruption Policy |
-| **18** | `exercise18-memory-leak` | `OutOfMemoryError` (Heap Space) | GC Root Retention in Continuous Loops |
-| **19** | `exercise19-stackoverflow` | `StackOverflowError` | Unbounded Recursion & Base Case |
-| **20** | `exercise20-custom-exception` | `OrderValidationException` | Custom Domain Error Hierarchy |
+This repository maintains **isolated solution branches** so you can inspect clean, verified reference solutions or compare your diff:
+
+- **Single Exercise Solutions:** `solutions-ex1` through `solutions-ex20`
+- **Master Solution Branch (All 20 Fixed):** `solutions`
+- **Starter Practice Branch:** `main`
+
+### Solution Commands:
+```bash
+# Switch to Exercise 01 solution
+git checkout solutions-ex1
+
+# Compare your code against the official Exercise 01 fix
+git diff main..origin/solutions-ex1 -- exercise01-nullpointer
+
+# Switch back to your practice branch
+git checkout main
+```
+
+---
+
+## 📋 Exercise Curriculum (20 Modules & Solution Branches)
+
+| # | Module Directory | Exception / Failure Mode | Target Debugging Pattern | Solution Branch |
+|:---:|:---|:---|:---|:---:|
+| **01** | `exercise01-nullpointer` | `NullPointerException` | Uninitialized Field & Reference Guard | `solutions-ex1` |
+| **02** | `exercise02-nullpointer-di` | `NullPointerException` | Missing Dependency Injection / Wiring | `solutions-ex2` |
+| **03** | `exercise03-index-loop` | `ArrayIndexOutOfBoundsException` | Off-by-One Loop Boundary | `solutions-ex3` |
+| **04** | `exercise04-index-emptylist` | `IndexOutOfBoundsException` | Positional Access on Empty List | `solutions-ex4` |
+| **05** | `exercise05-divide-zero` | `ArithmeticException` | Division Guard & Defensive Validation | `solutions-ex5` |
+| **06** | `exercise06-number-format` | `NumberFormatException` | String Number Parsing & Sanitization | `solutions-ex6` |
+| **07** | `exercise07-classpath` | `ClassNotFoundException` | Classpath Resolution & FQCN Verification | `solutions-ex7` |
+| **08** | `exercise08-illegal-argument` | `IllegalArgumentException` | Domain Boundary & Input Validation | `solutions-ex8` |
+| **09** | `exercise09-file-path` | `FileNotFoundException` | Working Directory (CWD) Resolution | `solutions-ex9` |
+| **10** | `exercise10-io-permission` | `IOException` | Directory Creation & Write Permissions | `solutions-ex10` |
+| **11** | `exercise11-concurrent-mod` | `ConcurrentModificationException` | Mutation During Active Iteration | `solutions-ex11` |
+| **12** | `exercise12-illegal-state` | `IllegalStateException` | Object Lifecycle Invariant Enforcement | `solutions-ex12` |
+| **13** | `exercise13-sql-syntax` | `SQLException` | SQL Grammar, Keywords & Escaping | `solutions-ex13` |
+| **14** | `exercise14-sql-connection` | `SQLException` (Connection Refused) | JDBC URL Protocol & Port Reachability | `solutions-ex14` |
+| **15** | `exercise15-json-parse` | `JsonProcessingException` | JSON Schema & DTO Deserialization | `solutions-ex15` |
+| **16** | `exercise16-http-unknown-host` | `UnknownHostException` | DNS Resolution & URI Hostname Formatting | `solutions-ex16` |
+| **17** | `exercise17-thread-interrupt` | `InterruptedException` | Java Thread Interruption Policy | `solutions-ex17` |
+| **18** | `exercise18-memory-leak` | `OutOfMemoryError` (Heap Space) | GC Root Retention in Continuous Loops | `solutions-ex18` |
+| **19** | `exercise19-stackoverflow` | `StackOverflowError` | Unbounded Recursion & Base Case | `solutions-ex19` |
+| **20** | `exercise20-custom-exception` | `OrderValidationException` | Custom Domain Error Hierarchy | `solutions-ex20` |
 
 ---
 
