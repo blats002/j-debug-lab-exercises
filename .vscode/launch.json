@@ -1,0 +1,148 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "exercise01-nullpointer",
+            "request": "launch",
+            "mainClass": "com.debug.ex01.App",
+            "projectName": "exercise01-nullpointer"
+        },
+        {
+            "type": "java",
+            "name": "exercise02-nullpointer-di",
+            "request": "launch",
+            "mainClass": "com.debug.ex02.App",
+            "projectName": "exercise02-nullpointer-di"
+        },
+        {
+            "type": "java",
+            "name": "exercise03-index-loop",
+            "request": "launch",
+            "mainClass": "com.debug.ex03.App",
+            "projectName": "exercise03-index-loop"
+        },
+        {
+            "type": "java",
+            "name": "exercise04-index-emptylist",
+            "request": "launch",
+            "mainClass": "com.debug.ex04.App",
+            "projectName": "exercise04-index-emptylist"
+        },
+        {
+            "type": "java",
+            "name": "exercise05-divide-zero",
+            "request": "launch",
+            "mainClass": "com.debug.ex05.App",
+            "projectName": "exercise05-divide-zero"
+        },
+        {
+            "type": "java",
+            "name": "exercise06-number-format",
+            "request": "launch",
+            "mainClass": "com.debug.ex06.App",
+            "projectName": "exercise06-number-format"
+        },
+        {
+            "type": "java",
+            "name": "exercise07-classpath",
+            "request": "launch",
+            "mainClass": "com.debug.ex07.App",
+            "projectName": "exercise07-classpath"
+        },
+        {
+            "type": "java",
+            "name": "exercise08-illegal-argument",
+            "request": "launch",
+            "mainClass": "com.debug.ex08.App",
+            "projectName": "exercise08-illegal-argument"
+        },
+        {
+            "type": "java",
+            "name": "exercise09-file-path",
+            "request": "launch",
+            "mainClass": "com.debug.ex09.App",
+            "projectName": "exercise09-file-path"
+        },
+        {
+            "type": "java",
+            "name": "exercise10-io-permission",
+            "request": "launch",
+            "mainClass": "com.debug.ex10.App",
+            "projectName": "exercise10-io-permission"
+        },
+        {
+            "type": "java",
+            "name": "exercise11-concurrent-mod",
+            "request": "launch",
+            "mainClass": "com.debug.ex11.App",
+            "projectName": "exercise11-concurrent-mod"
+        },
+        {
+            "type": "java",
+            "name": "exercise12-illegal-state",
+            "request": "launch",
+            "mainClass": "com.debug.ex12.App",
+            "projectName": "exercise12-illegal-state"
+        },
+        {
+            "type": "java",
+            "name": "exercise13-sql-syntax",
+            "request": "launch",
+            "mainClass": "com.debug.ex13.App",
+            "projectName": "exercise13-sql-syntax"
+        },
+        {
+            "type": "java",
+            "name": "exercise14-sql-connection",
+            "request": "launch",
+            "mainClass": "com.debug.ex14.App",
+            "projectName": "exercise14-sql-connection"
+        },
+        {
+            "type": "java",
+            "name": "exercise15-json-parse",
+            "request": "launch",
+            "mainClass": "com.debug.ex15.App",
+            "projectName": "exercise15-json-parse"
+        },
+        {
+            "type": "java",
+            "name": "exercise16-http-unknown-host",
+            "request": "launch",
+            "mainClass": "com.debug.ex16.App",
+            "projectName": "exercise16-http-unknown-host"
+        },
+        {
+            "type": "java",
+            "name": "exercise17-thread-interrupt",
+            "request": "launch",
+            "mainClass": "com.debug.ex17.App",
+            "projectName": "exercise17-thread-interrupt"
+        },
+        {
+            "type": "java",
+            "name": "exercise18-memory-leak",
+            "request": "launch",
+            "mainClass": "com.debug.ex18.App",
+            "projectName": "exercise18-memory-leak"
+        },
+        {
+            "type": "java",
+            "name": "exercise19-stackoverflow",
+            "request": "launch",
+            "mainClass": "com.debug.ex19.App",
+            "projectName": "exercise19-stackoverflow"
+        },
+        {
+            "type": "java",
+            "name": "exercise20-custom-exception",
+            "request": "launch",
+            "mainClass": "com.debug.ex20.App",
+            "projectName": "exercise20-custom-exception"
+        }
+    ]
+}
