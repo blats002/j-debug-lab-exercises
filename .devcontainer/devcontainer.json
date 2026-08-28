@@ -1,13 +1,6 @@
 {
-  "name": "Java 21 Environment",
-  "image": "mcr.microsoft.com/devcontainers/universal:latest",
-  "features": {
-    "ghcr.io/devcontainers/features/java:1": {
-      "version": "21",
-      "installMaven": "true",
-      "installGradle": "true"
-    }
-  },
+  "name": "Java 21 Debugging Lab",
+  "image": "mcr.microsoft.com/devcontainers/java:1-21-bookworm",
   "customizations": {
     "vscode": {
       "extensions": [
