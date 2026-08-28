@@ -12,7 +12,8 @@
 5. [Step 5: Verify Your Fix with the Testing Plugin](#step-5-verify-your-fix-with-the-testing-plugin)
 6. [Step 6: Save Your Progress (Source Control)](#step-6-save-your-progress-source-control)
 7. [Step 7: Stop the Codespace (Save Free Hours)](#step-7-stop-the-codespace-save-free-hours)
-8. [Summary of GUI Controls & Shortcuts](#summary-of-gui-controls--shortcuts)
+8. [Step 8: Need Help or Spotted an Issue?](#step-8-need-help-or-spotted-an-issue)
+9. [Summary of GUI Controls & Shortcuts](#summary-of-gui-controls--shortcuts)
 
 ---
 
@@ -30,7 +31,9 @@
 When your browser loads the Codespace editor:
 1. Look at the bottom **Status Bar** (bottom-left / bottom-right).
 2. Wait until `Opening Java Projects...` and `Building workspace...` finish and disappear.
-3. Once completed, the Java Debugger and Test Runner plugins are active and ready.
+3. If prompted for **Workspace Trust**, click **Trust Folder & Continue**.
+4. If prompted for **Standard Mode**, click **Yes**.
+5. Once completed, the Java Debugger and Test Runner plugins are active and ready.
 
 ---
 
@@ -48,7 +51,7 @@ You can trigger and reproduce any exercise's crash using the **Run & Debug** dro
 ## Step 4: Set Breakpoints & Step Through the Code
 
 ### 1. Set a Breakpoint
-- Open the target Java file (e.g., `OrderService.java`).
+- Open the target Java file (e.g., `UserService.java`).
 - Click in the **left margin (gutter)** next to the line number where you suspect the issue occurs.
 - A **solid red circle (🔴)** will appear.
 
@@ -77,7 +80,7 @@ You can trigger and reproduce any exercise's crash using the **Run & Debug** dro
 After fixing the bug in your code, use the **Test Explorer** to verify your changes without running any terminal commands:
 
 1. Click the **Testing Beaker icon (🧪)** in the left Activity Bar.
-2. Expand the module you are working on (e.g. `exercise01-nullpointer` ➔ `OrderServiceTest`).
+2. Expand the module you are working on (e.g. `exercise01-nullpointer` ➔ `UserServiceTest`).
 3. Click the **Play (▶️)** button next to the test class or method to run the test.
 4. *(Optional)* Click the **Debug (🐞)** icon next to any test to step through the test with breakpoints.
 
@@ -90,7 +93,7 @@ After fixing the bug in your code, use the **Test Explorer** to verify your chan
 
 1. Click the **Source Control icon** in the left Activity Bar (`Ctrl + Shift + G`).
 2. Click the **`+`** icon next to modified files to stage them.
-3. Enter a commit message (e.g., `fix: resolve NullPointerException in OrderService`).
+3. Enter a commit message (e.g., `fix: resolve NullPointerException in UserService`).
 4. Click **Commit**, then click **Sync Changes** to push to your GitHub fork.
 
 ---
@@ -101,6 +104,14 @@ When you finish your practice session:
 1. Press `F1` (or `Ctrl + Shift + P` / `Cmd + Shift + P`) to open the Command Palette.
 2. Type: `Codespaces: Stop Current Codespace` and press **Enter**.
 3. You can resume your workspace anytime at [github.com/codespaces](https://github.com/codespaces).
+
+---
+
+## Step 8: Need Help or Spotted an Issue?
+
+If you encounter any issues, setup snags, or have feedback on the exercises:
+1. Go to the [j-debug-lab-exercises Issues tracker](https://github.com/blats002/j-debug-lab-exercises/issues).
+2. Click **New issue** and let us know!
 
 ---
 
