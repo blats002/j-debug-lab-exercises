@@ -28,9 +28,11 @@ When investigating any bug in this lab, apply the 6-step framework:
 
 ### Option A: 1-Click Cloud Sandbox (GitHub Codespaces - Recommended)
 1. Fork this repository to your GitHub account.
-2. Click the badge below to launch a pre-configured browser IDE with JDK 17 & Gradle ready:
+2. Click the badge below to launch a pre-configured browser IDE with JDK 21, Gradle, and debugging extensions ready:
    
    [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=blats002/j-debug-lab-exercises)
+
+📖 **Full Step-by-Step Visual Guide:** See [GITHUB_CODESPACES_GUIDE.md](GITHUB_CODESPACES_GUIDE.md) for complete 100% GUI-based debugging & testing instructions.
 
 ### Option B: Local Setup
 1. Ensure **JDK 17+** is installed:
@@ -51,22 +53,22 @@ When investigating any bug in this lab, apply the 6-step framework:
 Each exercise is an isolated Gradle submodule under `exerciseNN-*`.
 
 ### 1. Reproduce the Crash (Step J)
-Run the application to observe the deterministic exception:
-```bash
-./gradlew :exercise01-nullpointer:run
-```
-*(Windows PowerShell: `.\gradlew.bat :exercise01-nullpointer:run`)*
+- **GUI (Codespaces / VS Code):** Open the **Run & Debug** panel (`Ctrl + Shift + D`), select the exercise configuration from the top dropdown (e.g. `exercise01-nullpointer`), and click the green **Play (▶️)** button.
+- **Terminal (Optional):**
+  ```bash
+  ./gradlew :exercise01-nullpointer:run
+  ```
 
 ### 2. Debug and Investigate (Steps D, E, B, U)
-- Set breakpoints in your IDE.
-- Use the **Gradle Extension** in VS Code/Codespaces to click **Debug** on `application -> run`.
-- Inspect variables, evaluate expressions, and locate the root cause.
+- Set breakpoints by clicking in the left gutter next to any line number.
+- Inspect variables, watches, call stacks, and evaluate expressions while execution is paused.
 
 ### 3. Verify Your Fix (Step G)
-Run the pre-written automated verification unit test:
-```bash
-./gradlew :exercise01-nullpointer:test
-```
+- **GUI (Codespaces / VS Code):** Open the **Testing Tab (🧪)** in the left sidebar and click **Play (▶️)** next to the exercise test class.
+- **Terminal (Optional):**
+  ```bash
+  ./gradlew :exercise01-nullpointer:test
+  ```
 
 Run all lab tests across all 20 modules:
 ```bash
