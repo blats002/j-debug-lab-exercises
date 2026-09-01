@@ -4,7 +4,10 @@ public class App {
     public static void main(String[] args) {
         CampaignService campaignService = new CampaignService();
 
-        // Valid promotion request with 25.0% discount
+        // Solution: Provide a valid percentage value within the domain-accepted range (0.0 to 100.0).
+        // Why: DiscountPolicy enforces domain invariants: if percentage is < 0 or > 100, it throws
+        // IllegalArgumentException. Passing a valid rate (e.g. 25.0%) respects business rules,
+        // and wrapping in try-catch ensures any unexpected runtime argument faults are caught gracefully.
         PromotionRequest request = new PromotionRequest("Summer Super Sale", 25.0);
 
         try {
