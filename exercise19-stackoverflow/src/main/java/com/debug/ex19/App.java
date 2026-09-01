@@ -8,7 +8,6 @@ public class App {
         Category sub = new Category("Computers", root);
         Category item = new Category("Laptops", sub);
 
-        // Intentional bug: Cyclic reference causing infinite recursion (StackOverflowError)
         root.setParent(item);
 
         String path = service.buildBreadcrumbPath(item);

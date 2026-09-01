@@ -9,7 +9,6 @@ public class TransactionAnalytics {
         for (Transaction tx : transactions) {
             total += tx.getAmount();
         }
-        // Intentional bug: dividing by size without checking if list is empty
         return total / transactions.size();
     }
 }

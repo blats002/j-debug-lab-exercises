@@ -6,7 +6,7 @@ public class StateMachine {
 
     public void process() {
         if (!initialized) {
-            throw new IllegalStateException("Not initialized"); // BUG trigger
+            throw new IllegalStateException("Not initialized");
         }
         System.out.println("Processing...");
     }

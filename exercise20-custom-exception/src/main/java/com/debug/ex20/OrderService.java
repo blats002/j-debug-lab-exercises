@@ -4,7 +4,7 @@ public class OrderService {
 
     public void placeOrder(int quantity) {
         if (quantity <= 0) {
-            throw new OrderValidationException("Quantity must be positive"); // custom exception
+            throw new OrderValidationException("Quantity must be positive");
         }
         System.out.println("Order placed: " + quantity);
     }
