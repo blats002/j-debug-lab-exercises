@@ -6,8 +6,22 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * AppConfigLoader parses key-value property files from disk into strongly-typed AppConfig models.
+ *
+ * Best practices demonstrated:
+ * 1. Try-with-resources: Ensures BufferedReader and underlying FileReader are closed cleanly.
+ * 2. Defensive parsing: Ignores empty lines and comments, with fallback default values.
+ */
 public class AppConfigLoader {
 
+    /**
+     * Reads and parses a properties configuration file from the specified path.
+     *
+     * @param filePath relative or absolute path to the configuration properties file
+     * @return parsed AppConfig domain entity
+     * @throws IOException if the file does not exist or cannot be read
+     */
     public AppConfig loadConfiguration(String filePath) throws IOException {
         Map<String, String> properties = new HashMap<>();
 
@@ -16,7 +30,7 @@ public class AppConfigLoader {
             while ((line = reader.readLine()) != null) {
                 line = line.trim();
                 if (line.isEmpty() || line.startsWith("#")) {
-                    continue;
+                    continue; // Skip comments and empty lines
                 }
                 String[] parts = line.split("=", 2);
                 if (parts.length == 2) {

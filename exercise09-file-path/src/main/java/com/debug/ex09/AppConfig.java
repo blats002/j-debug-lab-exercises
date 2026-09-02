@@ -1,6 +1,10 @@
 package com.debug.ex09;
 
+/**
+ * AppConfig is an immutable configuration model storing application runtime properties.
+ */
 public class AppConfig {
+
     private final String environment;
     private final int maxConnections;
     private final boolean featureEnabled;
