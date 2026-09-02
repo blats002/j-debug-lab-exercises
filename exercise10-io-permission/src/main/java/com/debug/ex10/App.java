@@ -1,17 +1,33 @@
 package com.debug.ex10;
 
-import java.io.FileWriter;
+import java.io.File;
 import java.io.IOException;
+import java.util.List;
 
+/**
+ * Application entry point demonstrating audit log writing:
+ * 1. Creates sample audit records.
+ * 2. Directs output to the active writable log file.
+ * 3. Writes records safely.
+ */
 public class App {
+
     public static void main(String[] args) throws IOException {
-        // Solution: Write to a safe, user-writable relative path (e.g. "protected.txt" or application log dir).
-        // Why: Attempting to write to system-restricted paths like "/root/protected.txt" or "C:\Windows" throws
-        // IOException / AccessDeniedException / FileNotFoundException because the process lacks OS privileges.
-        // Using a relative path within the application directory ensures write permissions succeed across platforms.
-        // Using try-with-resources guarantees the file writer is properly flushed and closed.
-        try (FileWriter writer = new FileWriter("protected.txt")) {
-            writer.write("test");
-        }
+        ArchiveStorageService storageService = new ArchiveStorageService();
+        AuditLogWriter writer = new AuditLogWriter();
+
+        List<AuditRecord> records = List.of(
+            new AuditRecord("EVT-1001", "admin", "USER_LOGIN", "2026-09-02T10:00:00Z"),
+            new AuditRecord("EVT-1002", "system", "PAYMENT_SYNC", "2026-09-02T10:05:00Z")
+        );
+
+        // Solution: Write active audit records to getActiveLogFile() instead of getArchivedLogFile().
+        // Why: The archived file (locked_audit.log) is marked as read-only. Attempting to write to a
+        // read-only file with new FileWriter(...) throws java.io.IOException (Access Denied / Permission Denied).
+        // Writing to getActiveLogFile() (active_audit.log) allows the application to write new records successfully.
+        File targetFile = storageService.getActiveLogFile();
+        int written = writer.writeRecords(targetFile, records);
+
+        System.out.println("Written " + written + " audit records to " + targetFile.getName());
     }
 }
