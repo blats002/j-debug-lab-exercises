@@ -1,19 +1,13 @@
 package com.debug.ex11;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class App {
     public static void main(String[] args) {
-        List<String> items = new ArrayList<>();
-        items.add("A");
-        items.add("B");
-        items.add("C");
+        CartDataService cartDataService = new CartDataService();
+        CartPromotionService promoService = new CartPromotionService();
 
-        for (String item : items) {
-            if ("B".equals(item)) {
-                items.add("D");
-            }
-        }
+        ShoppingCart cart = cartDataService.getCustomerCart();
+        promoService.applyAutoBundles(cart);
+
+        System.out.println("Cart processed successfully with " + cart.getItemCount() + " items.");
     }
 }
