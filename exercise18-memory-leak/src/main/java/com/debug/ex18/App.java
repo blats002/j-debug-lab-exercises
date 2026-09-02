@@ -1,22 +1,24 @@
 package com.debug.ex18;
 
-import java.util.ArrayList;
-import java.util.List;
-
+/**
+ * Application entry point demonstrating memory-safe session cache management:
+ * 1. Generates incoming user session traffic.
+ * 2. Ingests sessions through SessionCacheManager (with bounded eviction policy).
+ * 3. Releases resources when processing concludes.
+ */
 public class App {
-    public static void main(String[] args) {
-        List<byte[]> list = new ArrayList<>();
 
-        // Solution: Limit loop iterations and periodically clear/evict accumulated buffers.
-        // Why: Holding strong references to large byte arrays in a collection prevents the Garbage Collector (GC)
-        // from reclaiming heap memory. In an unbounded loop, this rapidly consumes all available JVM heap space
-        // and throws java.lang.OutOfMemoryError: Java heap space. Clearing or bounding the collection allows GC
-        // to reclaim memory and keeps heap utilization stable.
+    public static void main(String[] args) {
+        SessionTrafficService trafficService = new SessionTrafficService();
+        SessionCacheManager cacheManager = new SessionCacheManager();
+
+        // Process a batch of 5 sessions within bounded capacity
         for (int i = 0; i < 5; i++) {
-            list.add(new byte[1024 * 1024]); // 1MB buffer
+            UserSession session = trafficService.createSession(i);
+            cacheManager.cacheSession(session);
         }
-        
-        System.out.println("Allocated " + list.size() + "MB safely without exhausting JVM heap.");
-        list.clear(); // Release references for garbage collection
+
+        System.out.println("Active sessions cached: " + cacheManager.getCachedSessionCount());
+        cacheManager.clear();
     }
 }
