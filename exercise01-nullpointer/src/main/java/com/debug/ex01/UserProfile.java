@@ -1,6 +1,10 @@
 package com.debug.ex01;
 
+/**
+ * UserProfile is an immutable domain model representing an enterprise user identity.
+ */
 public class UserProfile {
+
     private final Long id;
     private final String name;
     private final String email;
